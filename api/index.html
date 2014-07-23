@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<title>City Pairs [API Version]</title>
+
+<meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+
+<script src="http://m.gsa.gov/m/js/jquery.min.js"></script>
+<script src="http://m.gsa.gov/m/js/bootstrap.min.js"></script>
+<script src="js/mustache.js"></script>
+<script src="js/app.js"></script>
+<link rel="stylesheet" href="http://m.gsa.gov/m/css/bootstrap.full.css">
+<link rel="stylesheet" href="http://m.gsa.gov/m/css/main.css">
+<link rel="stylesheet" href="css/animate.css">
+
+<style>
+.fullWidthControls button,.fullWidthControls select{
+	width:100%;
+}
+.fullWidthControls input[type=text]{
+	width:99%;
+}
+.cpp_rate_container{
+	overflow:hidden;
+}
+#cpp-origin-autocomplete{
+	width:99%;
+	height:0px;
+	overflow:visible;
+}
+#cpp-cities{
+	overflow:visible;
+}
+.container{
+	min-height:1000px;
+}
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<h1>City Pairs</h1>
+		<div id="cpp-cities" class="well fullWidthControls">
+			<div class="control-group location">
+				<div class="controls">
+					<label for="cpp-origin" class="control-label">Origin City:</label>
+					<!--<select id="cpp-origin"></select><br>-->
+					<input type="text" id="cpp-origin">
+					<div id="cpp-origin-autocomplete"></div>
+					<label for="cpp-destination" class="control-label">Destination City:</label>
+					<select id="cpp-destination"></select><br>
+				</div>
+			</div>
+			<button id="cpp-search" disabled class="btn btn-primary btn-large">Find Rate</button>
+		</div>
+			<div id="cpp-rate-container">
+			<div id="cpp-rate">
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
